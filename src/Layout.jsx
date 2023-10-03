@@ -3,7 +3,11 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import injectContext from './store/AppContext'
 import Home from './views/Home'
-import { Demo } from './views/Demo'
+import { SearchAnswer } from './views/SearchAnswer'
+import { QuoteForm } from './views/QuoteForm'
+import { QuoteAnswer } from './views/QuoteAnswer'
+import { FooterCommerce } from './components/footerCommerce'
+
 
 
 const Layout = () => {
@@ -11,9 +15,11 @@ const Layout = () => {
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/demo" element={<Demo />} />
-
+            <Route path="/SearchAnswer" element={<SearchAnswer />} />
+            <Route path="/QuoteForm" element={<QuoteForm />} />
+            <Route path="/QuoteAnswer" element={<QuoteAnswer/>} />
         </Routes>
+        <FooterCommerce/>
     </BrowserRouter>
   )
 }
